@@ -9,6 +9,17 @@
   }
 }
 
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: rotate translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: rotate translateY(10px);
+  }
+}
+
 @keyframes grow-left {
   from {
     transform: scaleX(0);
@@ -18,11 +29,19 @@
   }
 }
 
+@keyframes grow-up {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
 .agent-1, 
 .agent-2,
 .agent-3 {
   float: left;
-  margin: 30px;
 }
 
 .agent-1, .agent-3 {
@@ -42,6 +61,82 @@
   animation-delay: 0.8s;
 }
 
-.body {
-  display: block;
+body {
+  background-color: #eee;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  position: relative;
+}
+
+#header {
+  background-color: white;
+  padding: 30px;
+}
+#header > div {
+  margin: 0 30px;
+}
+
+#content {
+  background-color: white;
+  float: left;
+  margin-top: 30px;
+  width: 100%;
+}
+
+html {
+}
+
+#wrapper {
+  margin: 0 auto;
+  padding: 20px;
+  width: 800px;
+}
+
+#main {
+  float: right;
+}
+
+#content {
+  padding: 20px;
+  width: 760px;
+}
+#latest {
+  float: left;
+  width: 50px;
+}
+
+
+.title {
+  opacity: 0;
+  animation: fade-in-up cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  animation-delay: 0.8s;
+}
+.vert-line {
+  width: 1px;
+  background-color: black;
+  height: 100px;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: grow-up cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  animation-delay: 1.0s;
+}
+
+#latest .vert-line {
+  margin-left: 20px;
+}
+.latest-text {
+  text-transform: uppercase;
+  transform-origin: 40px 25px;
+  transform: rotate(-90deg);
+
+  opacity: 0;
+  animation: fade-in-up ease 0.4s forwards;
+  animation-delay: 1.0s;
+}
+
+img {
+  opacity: 0;
+  animation: fade-in-up cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  animation-delay: 1.0s;
 }
