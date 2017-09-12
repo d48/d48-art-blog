@@ -1,2 +1,2 @@
 # Todo
-* 9/11/2017 - need to figure out how to rotate text but animate it up and use generic keyframe function
+* 9/12/2017 - set up responsive layout and system to upload latest image easily and to archive the rest
