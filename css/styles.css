@@ -12,11 +12,11 @@
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: rotate translateY(30px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
-    transform: rotate translateY(10px);
+    transform: translateY(0px);
   }
 }
 
@@ -55,6 +55,8 @@
   animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
   animation-delay: 0.4s;
   width: 300px;
+  height: 1px;
+  background-color: black;
 }
 
 .agent-3 {
@@ -71,6 +73,7 @@ body {
 
 #header {
   background-color: white;
+  line-height: 2px;
   padding: 30px;
 }
 #header > div {
@@ -80,7 +83,6 @@ body {
 #content {
   background-color: white;
   float: left;
-  margin-top: 30px;
   width: 100%;
 }
 
@@ -93,8 +95,20 @@ html {
   width: 800px;
 }
 
+
 #main {
   float: right;
+}
+
+.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navigation li {
+  display: inline-block;
+  margin-right: 30px;
+  padding: 0;
 }
 
 #content {
@@ -110,7 +124,7 @@ html {
 .title {
   opacity: 0;
   animation: fade-in-up cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
-  animation-delay: 0.8s;
+  animation-delay: 0.5s;
 }
 .vert-line {
   width: 1px;
@@ -125,14 +139,17 @@ html {
 #latest .vert-line {
   margin-left: 20px;
 }
+
+.latest-container {
+  animation: fade-in-up ease 0.4s forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+}
+
 .latest-text {
   text-transform: uppercase;
   transform-origin: 40px 25px;
   transform: rotate(-90deg);
-
-  opacity: 0;
-  animation: fade-in-up ease 0.4s forwards;
-  animation-delay: 1.0s;
 }
 
 img {
