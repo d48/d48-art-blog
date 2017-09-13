@@ -8,6 +8,8 @@
                                               |___/ 
 ```
 
+![screenshot](http://content.screencast.com/users/Ryan.Regalado/folders/github/media/3b440534-46fe-499b-ac88-4c187aede37b/d48-blog-layout.gif)
+
 Layout for my art blog to record latest paintings and drawings
 * Uses css animations
 * Will have responsive layout
